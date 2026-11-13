@@ -21,7 +21,7 @@ public class User {
 
     User (int id, String tI, String nI, String pN,String sN, String pA, String sA, String username, String password, String telefono, String correo,
          String fotoUrl) {
-        
+
         this.id = id;
         this.username = username;
         this.password = password;
@@ -45,29 +45,25 @@ public class User {
         return id;
     }
 
-    public String getTipoIdentificacion() {
+    public String getTI() {
         return tipoIdentificacion;
     }
 
-    public String getNumeroIdentificacion() {
+    public String getNI() {
         return numeroIdentificacion;
     }
 
-    public String getPrimerNombre() {
+    public String getPN() {
         return primerNombre;
     }
 
-    public String getSegundoNombre() {
+    public String getSN() {
         return segundoNombre;
     }
 
-    public String getPrimerApellido() {
-        return primerApellido;
-    }
+    public String getPA() { return primerApellido; }
 
-    public String getSegundoApellido() {
-        return segundoApellido;
-    }
+    public String getSA() { return segundoApellido; }
 
     public String getUsername() {
         return username;
@@ -95,29 +91,27 @@ public class User {
         this.id = id;
     }
 
-    public void setTipoIdentificacion(String tipoIdentificacion) {
+    public void setTI(String tipoIdentificacion) {
         this.tipoIdentificacion = tipoIdentificacion;
     }
 
-    public void setNumeroIdentificacion(String numeroIdentificacion) {
+    public void setNI(String numeroIdentificacion) {
         this.numeroIdentificacion = numeroIdentificacion;
     }
 
-    public void setPrimerNombre(String primerNombre) {
+    public void setPN(String primerNombre) {
         this.primerNombre = primerNombre;
     }
 
-    public void setSegundoNombre(String segundoNombre) {
+    public void setSN(String segundoNombre) {
         this.segundoNombre = segundoNombre;
     }
 
-    public void setPrimerApellido(String primerApellido) {
+    public void setPA(String primerApellido) {
         this.primerApellido = primerApellido;
     }
 
-    public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellido = segundoApellido;
-    }
+    public void setSA(String segundoApellido) { this.segundoApellido = segundoApellido; }
 
     public void setUsername(String username) {
         this.username = username;
