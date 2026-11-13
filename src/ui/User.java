@@ -19,6 +19,24 @@ public class User {
 
     // CONSTRUCTOR USUARIO
 
+    User (int id, String tI, String nI, String pN,String sN, String pA, String sA, String username, String password, String telefono, String correo,
+         String fotoUrl) {
+        
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.fotoUrl = fotoUrl;
+        tI = tipoIdentificacion;
+        nI = numeroIdentificacion;
+        pN = primerNombre;
+        sN = segundoNombre;
+        pA = primerApellido;
+        sA = segundoApellido;
+
+    }
+
     // METODOS USUARIO
 
       // GET
