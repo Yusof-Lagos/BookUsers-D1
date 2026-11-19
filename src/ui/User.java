@@ -19,8 +19,8 @@ public class User {
 
     // CONSTRUCTOR USUARIO
 
-    User (int id, String tI, String nI, String pN,String sN, String pA, String sA, String username, String password, String telefono, String correo,
-         String fotoUrl) {
+    public User (int id, String tI, String nI, String pN,String sN, String pA, String sA, String username, String password,
+                 String telefono, String correo, String fotoUrl) {
 
         this.id = id;
         this.username = username;
@@ -39,7 +39,7 @@ public class User {
 
     // METODOS USUARIO
 
-      // GET
+     // GET
 
     public int getId() {
         return id;
@@ -85,7 +85,7 @@ public class User {
         return fotoUrl;
     }
 
-      // SET
+     // SET
 
     public void setId(int id) {
         this.id = id;
