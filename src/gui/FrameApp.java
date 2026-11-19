@@ -12,20 +12,14 @@ public class FrameApp {
     private final int width;
     private final int height;
 
-     // BOTONES
-
-    private final JButton rUsers;
-    private final JButton lUsers;
-    private final JButton credits;
-
     // CONSTRUCTOR FRAME
 
     public FrameApp(int w, int h) {
 
         frame = new JFrame();
-        rUsers = new JButton();
-        lUsers = new JButton();
-        credits = new JButton();
+      //
+        //
+        //
         width = w;
         height = h;
 
@@ -38,16 +32,24 @@ public class FrameApp {
         frame.setSize(width, height);
         frame.setTitle("YUSOF APP");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-        frame.add(rUsers);
-        frame.add(lUsers);
-        frame.add(credits);
+    }
 
+    // ID
+
+    private int IDC = 1;
+
+    public int generateId (){
+        return IDC++;
     }
 
     // EVENTOS
 
-
-
 }
+
+
+
+
+
