@@ -10,9 +10,15 @@ public class FormMenu {
 
     // ATRIBUTOS
 
-     // FRAME
+     // ARRAYLIST
+
+    ArrayList<User> Users = new ArrayList<>();
+
+      // FRAME
 
     private final JFrame frameOne;
+
+    // COMPONENTES
 
      // BOTONES
 
@@ -30,12 +36,37 @@ public class FormMenu {
 
         frameOne = new JFrame();
 
+        // LISTENERS BOTONES
+
         buttonR.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 FormRegistro oneV  = new FormRegistro(Users);
 
                 oneV.setUpFrameTwo();
+
+            }
+        });
+
+        buttonL.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                FormListado twoV = new FormListado(Users);
+
+                twoV.setUpFrameThree();
+
+            }
+        });
+
+        buttonC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                FormCreditos threeV = new FormCreditos();
+
+                threeV.setUpFrameFour();
             }
         });
     }
@@ -44,7 +75,7 @@ public class FormMenu {
 
     public void setUpFrameOne() {
 
-        frameOne.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frameOne.setSize(1200, 600);
         frameOne.setTitle("BookUsers");
         frameOne.setContentPane(panelOne);
         frameOne.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,10 +93,6 @@ public class FormMenu {
         return IDC++;
 
     }
-
-    // ARRAYLIST
-
-    ArrayList<User> Users = new ArrayList<>();
 
     // EVENTOS
 
