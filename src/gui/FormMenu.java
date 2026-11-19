@@ -20,8 +20,6 @@ public class FormMenu {
 
     // COMPONENTES
 
-     // BOTONES
-
     private JButton buttonR;
     private JButton buttonL;
     private JButton buttonC;
@@ -36,13 +34,13 @@ public class FormMenu {
 
         frameOne = new JFrame();
 
-        // LISTENERS BOTONES
+        // ACTION LISTENERS
 
         buttonR.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                FormRegistro oneV  = new FormRegistro(Users);
+                FormRegistro oneV  = new FormRegistro(Users, FormMenu.this);
 
                 oneV.setUpFrameTwo();
 
