@@ -9,7 +9,6 @@ public class FormCreditos {
     // FRAME
 
     private JFrame frameFour;
-    private JButton button1;
     private JPanel panelFour;
 
     // CONSTRUCTOR FRAME
@@ -24,8 +23,8 @@ public class FormCreditos {
 
     public void setUpFrameFour() {
 
-        frameFour.setSize(700,500);
-        frameFour.setTitle("CREDITOS");
+        frameFour.setSize(450,500);
+        frameFour.setTitle("Creditos");
         frameFour.setContentPane(panelFour);
         frameFour.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frameFour.setLocationRelativeTo(null);
