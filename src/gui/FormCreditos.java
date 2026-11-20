@@ -1,9 +1,6 @@
 package gui;
 
-import ui.User;
-
 import javax.swing.*;
-import java.util.ArrayList;
 
 public class FormCreditos {
 

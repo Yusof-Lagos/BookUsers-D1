@@ -4,10 +4,12 @@ import ui.User;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class FormRegistro {
 
@@ -17,6 +19,7 @@ public class FormRegistro {
     private String pAt;
     private String sAt;
     private String pNt;
+    private String url;
 
     // FRAME
 
@@ -42,6 +45,7 @@ public class FormRegistro {
     private JButton crearUsuarioButton;
     private JButton cargarFotoButton;
     private JLabel userL;
+    private JLabel imageL;
 
     // CONSTRUCTOR FRAME
 
@@ -146,7 +150,7 @@ public class FormRegistro {
 
         });
 
-        // USERNAME
+        // LISTENER REPETIDOR
 
         DocumentListener listener = new DocumentListener() {
 
@@ -174,20 +178,74 @@ public class FormRegistro {
         txtPa.getDocument().addDocumentListener(listener);
         txtSa.getDocument().addDocumentListener(listener);
 
+        // CARGAR IMAGENES
+
+        cargarFotoButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                JFileChooser seleccionar = new JFileChooser();
+
+                FileNameExtensionFilter filtro = new FileNameExtensionFilter("Imagenes archivo", "png", "jpg");
+
+                seleccionar.setFileFilter(filtro);
+
+                int estado = seleccionar.showOpenDialog(null);
+
+                if (estado == JFileChooser.APPROVE_OPTION) {
+
+                    File archivo = seleccionar.getSelectedFile();
+                    String verificacion = archivo.getName().toLowerCase();
+
+                    if (verificacion.endsWith(".jpg") || (verificacion.endsWith(".png"))) {
+
+                        url = archivo.getAbsolutePath();
+
+                        ImageIcon imagen = new ImageIcon(url);
+
+                        Image imagenO = imagen.getImage().getScaledInstance(imageL.getWidth(), imageL.getHeight(), Image.SCALE_SMOOTH);
+
+                        imageL.setText("");
+                        imageL.setIcon(new ImageIcon(imagenO));
+
+                    } else {
+
+                        JOptionPane.showMessageDialog(null, "Solo se permite JPG y PNG");
+
+                    }
+
+                } else if (estado == JFileChooser.CANCEL_OPTION) {
+
+                    JOptionPane.showMessageDialog(null, "Seleccion cancelada");
+
+                } else if (estado == JFileChooser.ERROR_OPTION) {
+
+                    JOptionPane.showMessageDialog(null, "Error");
+
+                }
+            }
+
+        });
+
     }
 
     // METODOS
 
+     // SETUP DE LA VENTANA
+
     public void setUpFrameTwo () {
 
-        frameTwo.setSize(700, 600);
-        frameTwo.setTitle("FormRegistro");
+        frameTwo.setSize(700, 800);
+        frameTwo.setTitle("Registro Usuarios");
         frameTwo.setContentPane(panelTwo);
         frameTwo.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frameTwo.setLocationRelativeTo(null);
         frameTwo.setVisible(true);
 
     }
+
+     // GENERADOR USERNAME
 
     public void generarUsuario () {
 

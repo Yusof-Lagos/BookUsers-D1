@@ -45,6 +45,7 @@ public class FormMenu {
                 oneV.setUpFrameTwo();
 
             }
+
         });
 
         buttonL.addActionListener(new ActionListener() {
@@ -73,8 +74,8 @@ public class FormMenu {
 
     public void setUpFrameOne() {
 
-        frameOne.setSize(1200, 600);
-        frameOne.setTitle("BookUsers");
+        frameOne.setSize(850, 550);
+        frameOne.setTitle("BookUsers · Yusof Lagos · Julio Cesar");
         frameOne.setContentPane(panelOne);
         frameOne.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameOne.setLocationRelativeTo(null);
