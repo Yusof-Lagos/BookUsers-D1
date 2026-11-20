@@ -3,6 +3,9 @@ package gui;
 import ui.User;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
 import java.util.ArrayList;
 
 public class FormListado {
@@ -16,11 +19,9 @@ public class FormListado {
 
     private JFrame frameThree;
     private JPanel panelThree;
-    private JList usuarioL;
+    private JList<User> usuarioL;
 
     private JButton detallesButton;
-    private JButton editarButton;
-    private JButton eliminarButton;
 
     // CONSTRUCTOR FRAME
 
@@ -31,6 +32,38 @@ public class FormListado {
 
         modelo = new DefaultListModel<>();
         usuarioL.setModel(modelo);
+
+        detallesButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (users.isEmpty()) {
+
+                    JOptionPane.showMessageDialog(null, "Ingresar usuario primero");
+
+                    return;
+
+                }
+
+                if (usuarioL.isSelectionEmpty()) {
+
+                    JOptionPane.showMessageDialog(null, "Seleccionar usuario");
+
+                } else if (!usuarioL.isSelectionEmpty()){
+
+                    User seleccion = usuarioL.getSelectedValue();
+
+                    FormDetalle fourV = new FormDetalle(seleccion);
+
+                    fourV.setUpFrameFive();
+                    fourV.usuarioInfo();
+
+                }
+
+            }
+
+        });
 
     }
 
@@ -46,6 +79,8 @@ public class FormListado {
         frameThree.setVisible(true);
 
     }
+
+    // MODELO
 
     public void usuarioNuevo (){
 

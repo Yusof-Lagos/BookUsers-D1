@@ -35,8 +35,8 @@
                   <background color="-4144960"/>
                   <font name="Monospaced" size="14" style="1"/>
                   <foreground color="-16777216"/>
-                  <selectionBackground color="-3025959"/>
-                  <selectionForeground color="-3025959"/>
+                  <selectionBackground color="-525825"/>
+                  <selectionForeground color="-16777216"/>
                   <selectionMode value="0"/>
                 </properties>
               </component>
@@ -72,7 +72,7 @@
           <text value="|"/>
         </properties>
       </component>
-      <grid id="e70b2" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="e70b2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
@@ -82,57 +82,6 @@
         </properties>
         <border type="bevel-lowered"/>
         <children>
-          <grid id="9f01e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-4144960"/>
-              <foreground color="-4144960"/>
-            </properties>
-            <border type="bevel-raised"/>
-            <children>
-              <component id="43144" class="javax.swing.JButton" binding="eliminarButton" default-binding="true">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-4144960"/>
-                  <borderPainted value="false"/>
-                  <font name="Courier New" size="14" style="1"/>
-                  <foreground color="-16777216"/>
-                  <text value="Eliminar"/>
-                </properties>
-              </component>
-            </children>
-          </grid>
-          <grid id="47a35" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-4144960"/>
-              <foreground color="-4144960"/>
-            </properties>
-            <border type="bevel-raised"/>
-            <children>
-              <component id="e0fc5" class="javax.swing.JButton" binding="editarButton" default-binding="true">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <autoscrolls value="false"/>
-                  <background color="-4144960"/>
-                  <borderPainted value="false"/>
-                  <font name="Courier New" size="14" style="1"/>
-                  <foreground color="-16777216"/>
-                  <text value="Editar"/>
-                </properties>
-              </component>
-            </children>
-          </grid>
           <grid id="af155" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
@@ -147,7 +96,7 @@
             <children>
               <component id="4cdf7" class="javax.swing.JButton" binding="detallesButton" default-binding="true">
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-4144960"/>
