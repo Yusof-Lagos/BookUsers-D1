@@ -19,7 +19,7 @@ public class User {
 
     // CONSTRUCTOR USUARIO
 
-    public User (int id, String tI, String nI, String pN,String sN, String pA, String sA, String username, String password,
+    public User (int id, String tI, String nI, String pN, String sN, String pA, String sA, String username, String password,
                  String telefono, String correo, String fotoUrl) {
 
         this.id = id;
@@ -28,17 +28,23 @@ public class User {
         this.telefono = telefono;
         this.correo = correo;
         this.fotoUrl = fotoUrl;
-        tI = tipoIdentificacion;
-        nI = numeroIdentificacion;
-        pN = primerNombre;
-        sN = segundoNombre;
-        pA = primerApellido;
-        sA = segundoApellido;
+        tipoIdentificacion = tI;
+        numeroIdentificacion = nI;
+        primerNombre = pN;
+        segundoNombre = sN;
+        primerApellido = pA;
+        segundoApellido = sA;
 
     }
 
     // METODOS USUARIO
 
+    @Override
+    public String toString() {
+
+        return " U" + id + " - " + username;
+
+    }
      // GET
 
     public int getId() {

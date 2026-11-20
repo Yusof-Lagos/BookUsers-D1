@@ -25,7 +25,7 @@ public class FormRegistro {
 
     private JFrame frameTwo;
     private FormMenu mV;
-    ArrayList<User> users;
+    private ArrayList<User> users;
 
     // COMPONENTES
 
@@ -73,6 +73,7 @@ public class FormRegistro {
                 String contraseña = new String(passwordC.getPassword());
                 String ct = txtCorreo.getText();
                 String tt = txtTelefono.getText();
+                int verificacion = 0;
 
                 // REVISA NOMBRE Y APELLIDO
 
@@ -92,6 +93,10 @@ public class FormRegistro {
 
                     JOptionPane.showMessageDialog(null, "El primer nombre es obligatorio");
 
+                } else {
+
+                    verificacion += 1;
+
                 }
 
                 // REVISA CORREO
@@ -103,6 +108,10 @@ public class FormRegistro {
                 } else if (!ct.contains("@")) {
 
                     JOptionPane.showMessageDialog(null, "Correo sin arroba invalido");
+
+                } else {
+
+                    verificacion += 1;
 
                 }
 
@@ -116,6 +125,10 @@ public class FormRegistro {
 
                     JOptionPane.showMessageDialog(null, "El telefono es obligatorio");
 
+                } else {
+
+                    verificacion += 1;
+
                 }
 
                 // REVISA CONTRASEÑA
@@ -123,6 +136,10 @@ public class FormRegistro {
                 if (contraseña.isEmpty()) {
 
                     JOptionPane.showMessageDialog(null, "La contraseña es obligatoria");
+
+                } else {
+
+                    verificacion += 1;
 
                 }
 
@@ -143,6 +160,20 @@ public class FormRegistro {
                 } else if (nIt.isEmpty()) {
 
                     JOptionPane.showMessageDialog(null, "Identificacion es obligatorio");
+
+                } else {
+
+                    verificacion += 1;
+
+                }
+
+                if (verificacion == 5) {
+
+                    User usuarios = new User(mV.generateId(), tIt, nIt, pNt, sNt, pAt, sAt, username, contraseña, tt, ct, url);
+
+                    JOptionPane.showMessageDialog(null, "Usuario creado");
+
+                    users.add(usuarios);
 
                 }
 

@@ -9,12 +9,18 @@ public class FormListado {
 
     // ATRIBUTOS
 
+    private ArrayList<User> users;
+    private DefaultListModel<User> modelo;
+
     // FRAME
 
     private JFrame frameThree;
-    ArrayList<User> users;
-    private JButton button1;
     private JPanel panelThree;
+    private JList usuarioL;
+
+    private JButton detallesButton;
+    private JButton editarButton;
+    private JButton eliminarButton;
 
     // CONSTRUCTOR FRAME
 
@@ -23,13 +29,16 @@ public class FormListado {
         this.users = users;
         frameThree = new JFrame();
 
+        modelo = new DefaultListModel<>();
+        usuarioL.setModel(modelo);
+
     }
 
     // METODOS
 
     public void setUpFrameThree() {
 
-        frameThree.setSize(700,500);
+        frameThree.setSize(500,600);
         frameThree.setTitle("FormListado");
         frameThree.setContentPane(panelThree);
         frameThree.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -37,4 +46,17 @@ public class FormListado {
         frameThree.setVisible(true);
 
     }
+
+    public void usuarioNuevo (){
+
+        modelo.clear();
+
+        for (User u : users) {
+
+            modelo.addElement(u);
+
+        }
+
+    }
+
 }

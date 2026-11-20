@@ -12,7 +12,7 @@ public class FormMenu {
 
      // ARRAYLIST
 
-    ArrayList<User> Users = new ArrayList<>();
+    private ArrayList<User> users = new ArrayList<>();
 
       // FRAME
 
@@ -37,10 +37,11 @@ public class FormMenu {
         // ACTION LISTENERS
 
         buttonR.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                FormRegistro oneV  = new FormRegistro(Users, FormMenu.this);
+                FormRegistro oneV  = new FormRegistro(users, FormMenu.this);
 
                 oneV.setUpFrameTwo();
 
@@ -52,11 +53,13 @@ public class FormMenu {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                FormListado twoV = new FormListado(Users);
+                FormListado twoV = new FormListado(users);
 
+                twoV.usuarioNuevo();
                 twoV.setUpFrameThree();
 
             }
+
         });
 
         buttonC.addActionListener(new ActionListener() {
@@ -66,8 +69,11 @@ public class FormMenu {
                 FormCreditos threeV = new FormCreditos();
 
                 threeV.setUpFrameFour();
+
             }
+
         });
+
     }
 
     // METODOS
